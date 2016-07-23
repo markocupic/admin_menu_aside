@@ -6,5 +6,5 @@
  * Time: 17:54
  */
 
-$GLOBALS['TL_LANG']['CTE']['fixedTabsAside'] = array('Fixe Seiten-Navigation');
-$GLOBALS['TL_LANG']['CTE']['fixedTabsAsideItem'] = array('Fixe Seiten-Navigation Element');
+$GLOBALS['TL_LANG']['CTE']['fixedTabsAside'] = array('Fix und vertikal positionierte Registerkarten (Tabs)');
+$GLOBALS['TL_LANG']['CTE']['fixedTabsAsideItem'] = array('Reiter Element (Pane)');
