@@ -16,25 +16,21 @@ namespace MCupic;
  *
  * @author Leo Feyer <https://github.com/leofeyer>
  */
-class AdminMenuAsideItem extends \ContentElement
+class FixedTabsAsideItem extends \ContentElement
 {
 
     /**
      * Template
      * @var string
      */
-    protected $strTemplate = 'ce_admin_menu_aside_item';
+    protected $strTemplate = 'ce_fixed_tabs_aside_item';
 
     /**
-     * Check whether the target page and the article are published
      * @return string
      */
     public function generate()
     {
-
-
         return parent::generate();
-
     }
 
 

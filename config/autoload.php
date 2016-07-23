@@ -24,7 +24,7 @@ ClassLoader::addNamespaces(array
 ClassLoader::addClasses(array
 (
 	// Elements
-	'MCupic\AdminMenuAsideItem' => 'system/modules/admin_menu_aside/elements/AdminMenuAsideItem.php',
+	'MCupic\FixedTabsAsideItem' => 'system/modules/fixed_tabs_aside/elements/FixedTabsAsideItem.php',
 ));
 
 
@@ -33,5 +33,6 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-	'ce_admin_menu_aside_item' => 'system/modules/admin_menu_aside/templates',
+	'ce_fixed_tabs_aside_item' => 'system/modules/fixed_tabs_aside/templates',
+	'j_fixed_tabs_aside'       => 'system/modules/fixed_tabs_aside/templates',
 ));

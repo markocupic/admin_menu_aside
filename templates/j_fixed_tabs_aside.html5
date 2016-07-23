@@ -1,0 +1,8 @@
+<script src="system/modules/fixed_tabs_aside/assets/fixedTabsAside.js"></script>
+<script>
+  (function($) {
+    $(document).ready(function() {
+      new AdminMenuAside();
+    });
+  })(jQuery);
+</script>

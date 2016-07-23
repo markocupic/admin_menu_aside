@@ -1,4 +1,4 @@
-.admin-menu-aside-layer {
+.fixed-tabs-aside-layer {
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +10,7 @@
   z-index: 99998;
 }
 
-#adminMenuAsideIconCol {
+#fixedTabsAsideIconBar {
   z-index: 99999;
   margin-top: 100px;
   position: fixed;
@@ -20,39 +20,42 @@
   text-align: center;
   transition: right 1s ease-in-out;
 
+
+
+
   >div {
-    border-bottom: 1px solid #fff;
-    background-color: #0a1524;
+    //border-bottom: 1px solid #fff;
+    background-color: #000;
 
     &:last-child {
       border: 0;
     }
     .fa {
       line-height: 40px;
-      font-size: 26px;
+      font-size: 20px;
       color: #fff;
     }
   }
 }
 
-#adminMenuBody {
+#fixedTabsAsideTabContent {
   z-index: 99999;
   display: none;
   position: fixed;
   width: 320px;
   max-width: 100%;
   height: 100%;
-  background-color: #333;
+  background-color: #222;
   top: 0;
   overflow-y: scroll;
   right: -320px;
   transition: right 1s ease-in-out;
-  >.admin-menu-aside-nav-row {
+  >.fixed-tabs-aside-nav-row {
     background-color: #444;
     display: block;
     height: 40px;
     text-align: right;
-    .admin-menu-aside-close-button {
+    .fixed-tabs-aside-close-button {
       padding:0;
       border:0;
       height:40px;
@@ -67,22 +70,39 @@
       }
     }
   }
-  >.admin-menu-aside-content-row {
-    padding: 25px 10px;
+  >.fixed-tabs-aside-content-row {
     overflow-x: hidden;
-    .admin-menu-aside-item {
+    .fixed-tabs-aside-tab-pane {
       display: none;
       &.active{
         display: block;
       }
-      .admin-menu-aside-item-header {
+      .fixed-tabs-aside-item-header {
         color: #fff;
+        background-color: #222;
+        height: 40px;
+        padding: 0 10px;
         & * {
           color: #fff;
+          margin:0;
+          line-height:40px;
         }
       }
-      .admin-menu-aside-item-body, .admin-menu-aside-item-footer {
+      .fixed-tabs-aside-item-body {
         color: #ddd;
+        background-color: #333;
+        padding: 10px;
+        & * {
+          color: #ddd;
+        }
+        select, option, input {
+          color: #333;
+        }
+      }
+      .fixed-tabs-aside-item-footer {
+        color: #ddd;
+        background-color: transparent;
+        padding: 10px;
         & * {
           color: #ddd;
         }
@@ -94,21 +114,21 @@
   }
 }
 
-// When menu is open
-html.admin-menu-aside-open {
+// When tab-menu is open
+html.fixed-tabs-aside-open {
 
-  .admin-menu-aside-layer {
+  .fixed-tabs-aside-layer {
     display: block;
   }
 
-  #adminMenuAsideIconCol {
+  #fixedTabsAsideIconBar {
     right: 320px;
     > div.active {
-      background-color: #004ebd;
+      background-color: #333;
     }
   }
 
-  #adminMenuBody {
+  #fixedTabsAsideTabContent {
     right: 0;
   }
 }

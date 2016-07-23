@@ -6,7 +6,9 @@
  * Time: 12:33
  */
 
-$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/admin_menu_aside/assets/adminMenuAside.js';
-$GLOBALS['TL_CSS'][] = 'system/modules/admin_menu_aside/assets/adminMenuAside.css';
+// CSS
+$GLOBALS['TL_CSS'][] = 'system/modules/fixed_tabs_aside/assets/fixedTabsAside.css';
 
-$GLOBALS['TL_CTE']['adminMenuAside']['adminMenuAsideItem'] = 'MCupic\AdminMenuAsideItem';
+
+// Content element
+$GLOBALS['TL_CTE']['fixedTabsAside']['fixedTabsAsideItem'] = 'MCupic\FixedTabsAsideItem';

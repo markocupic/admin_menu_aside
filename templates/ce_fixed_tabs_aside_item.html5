@@ -1,0 +1,16 @@
+<div class="fixed-tabs-aside-tab-pane <?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?> data-title="Kurse suche/filtern" data-icon="<?= $this->iconFontClass ?>">
+
+    <div class="fixed-tabs-aside-item-header">
+        <?php if ($this->headline): ?>
+        <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+        <?php endif; ?>
+    </div>
+
+    <div class="fixed-tabs-aside-item-body">
+        <?= $this->bodyContent ?>
+    </div>
+
+    <div class="fixed-tabs-aside-item-footer">
+        <?= $this->footerContent ?>
+    </div>
+</div>

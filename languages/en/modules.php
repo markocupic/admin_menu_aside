@@ -6,5 +6,5 @@
  * Time: 17:54
  */
 
-$GLOBALS['TL_LANG']['CTE']['adminMenuAside'] = array('Fixe Seiten-Navigation');
-$GLOBALS['TL_LANG']['CTE']['adminMenuAsideItem'] = array('Fixe Seiten-Navigation Element');
+$GLOBALS['TL_LANG']['CTE']['fixedTabsAside'] = array('Fixe Seiten-Navigation');
+$GLOBALS['TL_LANG']['CTE']['fixedTabsAsideItem'] = array('Fixe Seiten-Navigation Element');
