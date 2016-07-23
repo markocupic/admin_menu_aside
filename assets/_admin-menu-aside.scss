@@ -1,0 +1,114 @@
+.admin-menu-aside-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #000;
+  opacity: 0.3;
+  z-index: 99998;
+}
+
+#adminMenuAsideIconCol {
+  z-index: 99999;
+  margin-top: 100px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40px;
+  text-align: center;
+  transition: right 1s ease-in-out;
+
+  >div {
+    border-bottom: 1px solid #fff;
+    background-color: #0a1524;
+
+    &:last-child {
+      border: 0;
+    }
+    .fa {
+      line-height: 40px;
+      font-size: 26px;
+      color: #fff;
+    }
+  }
+}
+
+#adminMenuBody {
+  z-index: 99999;
+  display: none;
+  position: fixed;
+  width: 320px;
+  max-width: 100%;
+  height: 100%;
+  background-color: #333;
+  top: 0;
+  overflow-y: scroll;
+  right: -320px;
+  transition: right 1s ease-in-out;
+  >.admin-menu-aside-nav-row {
+    background-color: #444;
+    display: block;
+    height: 40px;
+    text-align: right;
+    .admin-menu-aside-close-button {
+      padding:0;
+      border:0;
+      height:40px;
+      margin-left: 1px solid transparent;
+      >i{
+        height:40px;
+        margin:0;
+        padding:7px 10px;
+        background-color: red;
+        font-size: 26px;
+        color: #eee;
+      }
+    }
+  }
+  >.admin-menu-aside-content-row {
+    padding: 25px 10px;
+    overflow-x: hidden;
+    .admin-menu-aside-item {
+      display: none;
+      &.active{
+        display: block;
+      }
+      .admin-menu-aside-item-header {
+        color: #fff;
+        & * {
+          color: #fff;
+        }
+      }
+      .admin-menu-aside-item-body, .admin-menu-aside-item-footer {
+        color: #ddd;
+        & * {
+          color: #ddd;
+        }
+        select, option, input {
+          color: #333;
+        }
+      }
+    }
+  }
+}
+
+// When menu is open
+html.admin-menu-aside-open {
+
+  .admin-menu-aside-layer {
+    display: block;
+  }
+
+  #adminMenuAsideIconCol {
+    right: 320px;
+    > div.active {
+      background-color: #004ebd;
+    }
+  }
+
+  #adminMenuBody {
+    right: 0;
+  }
+}
