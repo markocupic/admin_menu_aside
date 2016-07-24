@@ -10,7 +10,7 @@
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  */
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['fixedTabsAsideItem'] = 'name,type;{link_legend},url,target;{content_legend},titleText,headline,bodyContent,footerContent;{template_legend:hide},customTpl;{icon_legend},iconFontClass;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['fixedTabsAsideItem'] = 'name,type;{link_legend},fixedTabsAsideUrl,target;{content_legend},titleText,headline,bodyContent,footerContent;{template_legend:hide},customTpl;{icon_legend},iconFontClass;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
 $GLOBALS['TL_DCA']['tl_content']['config']['onload_callback'][] = array('tl_content_fixed_tabs_aside', 'showJsLibraryHint');
 
 
@@ -19,34 +19,44 @@ $GLOBALS['TL_DCA']['tl_content']['config']['onload_callback'][] = array('tl_cont
  */
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['bodyContent'] = array(
-    'label' => &$GLOBALS['TL_LANG']['tl_content']['bodyContent'],
-    'exclude' => true,
-    'search' => true,
-    'inputType' => 'textarea',
-    'eval' => array('mandatory' => false, 'rte' => 'tinyMCE', 'helpwizard' => true),
+    'label'       => &$GLOBALS['TL_LANG']['tl_content']['bodyContent'],
+    'exclude'     => true,
+    'search'      => true,
+    'inputType'   => 'textarea',
+    'eval'        => array('mandatory' => false, 'rte' => 'tinyMCE', 'helpwizard' => true),
     'explanation' => 'insertTags',
-    'sql' => "mediumtext NULL"
+    'sql'         => "mediumtext NULL",
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['footerContent'] = array(
-    'label' => &$GLOBALS['TL_LANG']['tl_content']['footerContent'],
-    'exclude' => true,
-    'search' => true,
-    'inputType' => 'textarea',
-    'eval' => array('mandatory' => false, 'rte' => 'tinyMCE', 'helpwizard' => true),
+    'label'       => &$GLOBALS['TL_LANG']['tl_content']['footerContent'],
+    'exclude'     => true,
+    'search'      => true,
+    'inputType'   => 'textarea',
+    'eval'        => array('mandatory' => false, 'rte' => 'tinyMCE', 'helpwizard' => true),
     'explanation' => 'insertTags',
-    'sql' => "mediumtext NULL"
+    'sql'         => "mediumtext NULL",
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['iconFontClass'] = array(
-    'label' => &$GLOBALS['TL_LANG']['tl_content']['iconFontClass'],
-    'exclude' => true,
-    'search' => true,
+    'label'     => &$GLOBALS['TL_LANG']['tl_content']['iconFontClass'],
+    'exclude'   => true,
+    'search'    => true,
     'inputType' => 'text',
-    'eval' => array('maxlength' => 200),
-    'sql' => "varchar(255) NOT NULL default ''"
+    'eval'      => array('maxlength' => 200),
+    'sql'       => "varchar(255) NOT NULL default ''",
 );
-
+$GLOBALS['TL_DCA']['tl_content']['fields']['fixedTabsAsideUrl'] = array(
+    'label'     => &$GLOBALS['TL_LANG']['tl_content']['fixedTabsAsideUrl'],
+    'exclude'   => true,
+    'search'    => true,
+    'inputType' => 'text',
+    'eval'      => array('mandatory' => false, 'rgxp' => 'url', 'decodeEntities' => true, 'maxlength' => 255, 'fieldType' => 'radio', 'filesOnly' => true, 'tl_class' => 'w50 wizard'),
+    'wizard'    => array(
+        array('tl_content', 'pagePicker'),
+    ),
+    'sql'       => "varchar(255) NOT NULL default ''"
+);
 
 /**
  * Provide miscellaneous methods that are used by the data configuration array.
