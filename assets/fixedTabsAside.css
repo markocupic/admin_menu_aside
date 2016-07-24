@@ -10,12 +10,16 @@
     z-index: 99998;
 }
 
+.fixed-tabs-aside-tab-pane {
+    display: none;
+}
+
 #fixedTabsAsideIconBar {
     z-index: 99999;
     margin-top: 100px;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -40px;
     width: 40px;
     text-align: center;
     transition: right 1s ease-in-out;
@@ -55,7 +59,7 @@
     padding: 0;
     border: 0;
     height: 40px;
-    margin-left: 1px solid transparent;
+    margin-left: 1px;
 }
 #fixedTabsAsideTabContent > .fixed-tabs-aside-nav-row .fixed-tabs-aside-close-button > i {
     height: 40px;
@@ -106,6 +110,10 @@
 }
 #fixedTabsAsideTabContent > .fixed-tabs-aside-content-row .fixed-tabs-aside-tab-pane .fixed-tabs-aside-item-footer select, #fixedTabsAsideTabContent > .fixed-tabs-aside-content-row .fixed-tabs-aside-tab-pane .fixed-tabs-aside-item-footer option, #fixedTabsAsideTabContent > .fixed-tabs-aside-content-row .fixed-tabs-aside-tab-pane .fixed-tabs-aside-item-footer input {
     color: #333;
+}
+
+html.fixed-tabs-aside-loaded #fixedTabsAsideIconBar {
+    right: 0;
 }
 
 html.fixed-tabs-aside-open .fixed-tabs-aside-layer {

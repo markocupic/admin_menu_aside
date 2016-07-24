@@ -10,23 +10,23 @@
   z-index: 99998;
 }
 
+.fixed-tabs-aside-tab-pane {
+  display: none;
+}
+
 #fixedTabsAsideIconBar {
   z-index: 99999;
   margin-top: 100px;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -40px;
   width: 40px;
   text-align: center;
   transition: right 1s ease-in-out;
+  //transition: top 1s ease-out;
 
-
-
-
-  >div {
-    //border-bottom: 1px solid #fff;
+  > div {
     background-color: #000;
-
     &:last-child {
       border: 0;
     }
@@ -50,31 +50,31 @@
   overflow-y: scroll;
   right: -320px;
   transition: right 1s ease-in-out;
-  >.fixed-tabs-aside-nav-row {
+  > .fixed-tabs-aside-nav-row {
     background-color: #444;
     display: block;
     height: 40px;
     text-align: right;
     .fixed-tabs-aside-close-button {
-      padding:0;
-      border:0;
-      height:40px;
-      margin-left: 1px solid transparent;
-      >i{
-        height:40px;
-        margin:0;
-        padding:7px 10px;
+      padding: 0;
+      border: 0;
+      height: 40px;
+      margin-left: 1px;
+      > i {
+        height: 40px;
+        margin: 0;
+        padding: 7px 10px;
         background-color: red;
         font-size: 26px;
         color: #eee;
       }
     }
   }
-  >.fixed-tabs-aside-content-row {
+  > .fixed-tabs-aside-content-row {
     overflow-x: hidden;
     .fixed-tabs-aside-tab-pane {
       display: none;
-      &.active{
+      &.active {
         display: block;
       }
       .fixed-tabs-aside-item-header {
@@ -84,8 +84,8 @@
         padding: 0 10px;
         & * {
           color: #fff;
-          margin:0;
-          line-height:40px;
+          margin: 0;
+          line-height: 40px;
         }
       }
       .fixed-tabs-aside-item-body {
@@ -111,6 +111,14 @@
         }
       }
     }
+  }
+}
+
+// When navbar is initialized
+html.fixed-tabs-aside-loaded {
+  #fixedTabsAsideIconBar {
+    // Slide it in to the right border of the page
+    right: 0;
   }
 }
 

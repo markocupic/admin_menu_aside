@@ -1,5 +1,4 @@
-<div class="fixed-tabs-aside-tab-pane <?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?> data-title="Kurse suche/filtern" data-icon="<?= $this->iconFontClass ?>">
-
+<div class="fixed-tabs-aside-tab-pane <?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?><?php if ($this->url): ?> data-url="<?= $this->url ?>"<?php endif; ?><?php if ($this->target): ?> data-target="<?= $this->target ?>"<?php endif; ?><?php if ($this->titleText): ?> data-title="<?= $this->titleText ?>"<?php endif; ?><?php if ($this->iconFontClass): ?> data-icon="<?= $this->iconFontClass ?>"<?php endif; ?>>
     <div class="fixed-tabs-aside-item-header">
         <?php if ($this->headline): ?>
         <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
@@ -14,3 +13,4 @@
         <?= $this->footerContent ?>
     </div>
 </div>
+

@@ -10,7 +10,7 @@
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  */
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['fixedTabsAsideItem'] = 'name,type,headline,bodyContent,footerContent;{template_legend:hide},customTpl;{icon_legend},iconFontClass;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['fixedTabsAsideItem'] = 'name,type;{link_legend},url,target;{content_legend},titleText,headline,bodyContent,footerContent;{template_legend:hide},customTpl;{icon_legend},iconFontClass;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
 $GLOBALS['TL_DCA']['tl_content']['config']['onload_callback'][] = array('tl_content_fixed_tabs_aside', 'showJsLibraryHint');
 
 
